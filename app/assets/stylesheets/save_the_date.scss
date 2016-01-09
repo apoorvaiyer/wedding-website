@@ -3,13 +3,16 @@
 
 h1, h2, h3, h4 {
   font-family: 'Allura', cursive;
-  @extend .blue-text.text-darken-1;
 }
 
-.col.s12 {
-  @extend .blue-text.text-darken-1;
+.col.s12, h1, h2, h3, h4 {
+  @extend .brown-text.text-darken-1;
 }
 
 body {
-  @extend .blue.lighten-5;
+  @extend .grey.lighten-5;
+}
+
+.card-content {
+  @extend .yellow.lighten-4;
 }
