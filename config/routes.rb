@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get 'save_the_date/index'
 
-  root 'welcome#index'
+  root 'save_the_date#index'
 end
