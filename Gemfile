@@ -12,7 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'slim'
 gem 'puma'
-gem 'google_drive'
+gem 'dynamoid'
+gem 'aws-sdk', '~>2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
