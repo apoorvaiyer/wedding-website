@@ -1,18 +1,21 @@
 @import "materialize/components/color";
 @import url(//fonts.googleapis.com/css?family=Allura);
 
-h1, h2, h3, h4 {
+h1, h2, h3, h5 {
   font-family: 'Allura', cursive;
 }
 
-.col.s12, h1, h2, h3, h4 {
+.col.s12, h1, h2, h3 {
   @extend .brown-text.text-darken-1;
 }
 
+h5 {
+  @extend .brown-text.text-lighten-2;
+}
+
 body {
-  @extend .grey.lighten-5;
 }
 
 .card-content {
-  @extend .yellow.lighten-4;
+  @extend .grey.lighten-5;
 }
