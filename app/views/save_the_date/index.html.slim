@@ -6,47 +6,48 @@
       .card-content
         .card-title.center-align
           h2 style="margin-bottom: 0" Save the date
-          h5 style="margin-top: 0" Feb 27th and 28th, 2016
+          h5 style="margin-top: 0" Feb 27th & 28th, 2016
         .divider
         br
-        .row
-          .col.s12
-            | What is your full name?
-          .col.s12
-            input.validate required="" aria-required="true" type="text" name="name" placeholder="Enter your name here"
-        .row
-          .col.s12
-            | What is your email address?
-          .input-field.col.s12
-            input.validate required="" aria-required="true" type="email" name="email" placeholder="Enter your email address here"
-        .row
-          .col.s12
-            | How many people in your party?
-          .input-field.col.s12
-            select
-              option value="" selected="" disabled="" Choose an option
-              option value="1" 1
-              option value="2" 2
-              option value="3" 3
-              option value="4" 4
-              option value="5" 5
-              option value="6" 6
-              option value="7" 7
-              option value="8" 8
-              option value="9" 9
-              option value="10" 10
-        .row
-          .col.s12
-            | Will you be able to make it for the wedding?
-          .col.s12
-            p
-              input.validate required="" aria-required="true" name="attendance" type="radio" id="attend_yes"
-              label for="attend_yes" Yes, with pleasure
-            p
-              input.validate required="" aria-required="true" name="attendance" type="radio" id="attend_no"
-              label for="attend_no" Regretfully not
-        .row
-          .col.s12
-            button.right.btn.waves-effect.waves-light.brown.darken-2 type="submit"
-              | RSVP
-              i.material-icons.right send
+        = form_tag save_the_date_rsvp_path do
+          .row
+            .col.s12
+              | Name
+            .col.s12
+              input.validate required="" aria-required="true" type="text" name="name" value="test" placeholder="Enter your name here"
+          .row
+            .col.s12
+              | Email
+            .input-field.col.s12
+              input.validate required="" aria-required="true" type="email" name="email" value="test@test.test" placeholder="Enter your email address here"
+          .row
+            .col.s12
+              | Number of people
+            .input-field.col.s12
+              select name="guest_count"
+                option value="" disabled="" Choose an option
+                option value="1" selected="" 1
+                option value="2" 2
+                option value="3" 3
+                option value="4" 4
+                option value="5" 5
+                option value="6" 6
+                option value="7" 7
+                option value="8" 8
+                option value="9" 9
+                option value="10" 10
+          .row
+            .col.s12
+              | Will you be able to make it for the wedding?
+            .col.s12
+              p
+                input.validate required="" aria-required="true" name="attending" type="radio" id="attend_yes" value="true"
+                label for="attend_yes" Yes, with pleasure
+              p
+                input.validate required="" aria-required="true" name="attending" type="radio" id="attend_no" value="false"
+                label for="attend_no" Regretfully not
+          .row
+            .col.s12
+              button.right.btn.waves-effect.waves-light.brown.darken-2 type="submit"
+                | RSVP
+                i.material-icons.right send
