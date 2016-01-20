@@ -1,3 +1,38 @@
-// Place all the styles related to the Rsvp controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "materialize/components/color";
+@import url(//fonts.googleapis.com/css?family=Allura);
+
+$base-color: #ee6e73;
+$text-color: darken($base-color, 10%);
+$lighter-text-color: lighten($base-color, 2%);
+$background-color: lighten($base-color, 25%);
+
+.text-color {
+  color: $text-color;
+  &.lighten {
+    color: $lighter-text-color;
+  }
+}
+
+h1, h2, h3, h5 {
+  font-family: 'Allura', cursive;
+}
+
+.col.s12, h1, h2, h3 {
+  @extend .text-color;
+}
+
+h5 {
+  @extend .text-color.lighten;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.card-content {
+  @extend .grey.lighten-5;
+}
+
+input {
+  @extend .blue-grey-text;
+}

@@ -15,6 +15,7 @@ gem 'puma'
 gem 'dynamoid'
 gem 'aws-sdk', '~>2'
 gem 'materialize-sass'
+gem 'responders'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

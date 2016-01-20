@@ -1,4 +1,4 @@
-class WeddingResponse
+class Rsvp
   include Dynamoid::Document
 
   validates :name, presence: true
