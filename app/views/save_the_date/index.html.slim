@@ -9,7 +9,7 @@
           h5 style="margin-top: 0" Feb 27th & 28th, 2016
         .divider
         br
-        = form_tag save_the_date_rsvp_path do
+        = form_tag(rsvp_create_path, :onsubmit => "return submitRsvp();") do
           .row
             .col.s12
               | Name
@@ -48,6 +48,11 @@
                 label for="attend_no" Regretfully not
           .row
             .col.s12
-              button.right.btn.waves-effect.waves-light.brown.darken-2 type="submit"
+              button.right.btn.waves-effect.waves-light.brown.darken-2 type="submit" onclick="validateRsvp()"
                 | RSVP
                 i.material-icons.right send
+            .col.s12.show-on-submit
+              .progress
+                .indeterminate
+            .col.s12.invalid-form.center
+              | Please fill out every field
